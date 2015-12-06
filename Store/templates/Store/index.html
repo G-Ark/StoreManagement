@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="{% static 'Store/css/style.css' %}">
 </head>
 <body>
-<header class="center clearfix" id="navtop"> 
+<header class="center clearfix" id="navtop">
   <a href="{% url 'index' %}" class="logo fleft">
-    <img src="{% static 'Store/img/logo.png' %}" alt="Store Management Sofware" />
+    <img src="{% static 'Store/img/logo1.png' %}" alt="Store Management Sofware" />
   </a>
   <nav class="fright">
     <ul>
@@ -32,16 +32,18 @@
       <p class="fleft">Home</p>
       <a href="about.html" class="arrow more fright">see more infos</a> </header>
     <div class="column2 mright">
-      <h1>Web design <br>
-        Web Development <br>
-        Graphic Design</h1>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. </p>
-      <p>Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. </p>
+      <h1>Store Management <br>
+        Software</h1>
+      <p>The Store management software is designed to ease the process of billing, inventory management and also view customer history. Serve your customers in the most efficient way.</p>
+      <p>Step 1. Register a customer for the first time.</p>
+      <p>Step 2. Update inventory when new stocks arrive.</p>
+      <p>Step 3. Associate a product with a registered customer.</p>
+      <p>View the history and plan accordingly to be more efficient!</p>
     </div>
     <div id="slides" class="slider column2">
       <div class="slides_container">
         <div class="slide">
-          <figure> <img src="img/4.jpg" alt="">
+          <figure> <img src="{% static 'Store/img/4.jpg' %}" alt="">
             <figcaption>
               <div>
                 <h5>Caption 1</h5>
@@ -51,7 +53,7 @@
           </figure>
         </div>
         <div class="slide">
-          <figure> <img src="img/5.jpg" alt="">
+          <figure> <img src="{% static 'Store/img/5.jpg' %}" alt="">
             <figcaption>
               <div>
                 <h5>Caption 2</h5>
@@ -62,7 +64,7 @@
           </figure>
         </div>
         <div class="slide">
-          <figure> <img src="img/6.jpg" alt="">
+          <figure> <img src="{% static 'Store/img/6.jpg' %}" alt="">
             <figcaption>
               <div>
                 <h5>Caption 3</h5>
@@ -72,7 +74,7 @@
           </figure>
         </div>
         <div class="slide">
-          <figure> <img src="img/9.jpg" alt="">
+          <figure> <img src="{% static 'Store/img/9.jpg' %}" alt="">
             <figcaption>
               <div>
                 <h5>Caption 4</h5>
@@ -140,12 +142,10 @@
   <div class="up column3 mright"> <a href="#navtop" class="ir">Go up</a> </div>
   <nav class="column3">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="works.html">Works</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="{% url 'index' %}">Home</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'contact' %}">Contact Me</a></li>
+      <li><a href="{% url 'login' %}">Login</a></li>
     </ul>
   </nav>
 </footer>
