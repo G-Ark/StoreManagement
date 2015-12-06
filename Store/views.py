@@ -24,7 +24,7 @@ def index(request):
 def about(request):
 	return render(request, 'Store/about.html');
 
-# About page of project at about
+# About page of project at login
 def login(request):
 	return render(request, 'Store/works.html');
 
@@ -48,6 +48,7 @@ def customerDetails(request,customerId):
 		return JSONResponse(serializer.data)
 
 # Lists the json response of all the inventory items
+# Ex: /store/inventory
 def inventory(request):
 	if request.method == 'GET':
 		inventory = Inventory.objects.all()
@@ -63,6 +64,7 @@ def inventoryDetails(request,inventoryId):
 		return JSONResponse(serializer.data)
 
 # Lists the purcahses by all customers
+# Ex: /store/purchase
 def purchase(request):
 	if request.method == 'GET':
 		purchase = Purchase.objects.all()
